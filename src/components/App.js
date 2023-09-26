@@ -4,6 +4,7 @@ import Header from './header/Header';
 import RecipeItem from './recipe-item/RecipeItem';
 import { useGetRecipesQuery } from '../store/api/api';
 import User from '../user/User';
+import CreateRecipe from './create-recipe/CreateRecipe';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <section>
       {/* <User/> */}
       <Header/>
+      <CreateRecipe/>
       <div className="App">
       {isLoading ? <div>Loading... </div> : data ? data.map(recipe => 
         <RecipeItem 
