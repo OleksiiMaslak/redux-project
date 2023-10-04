@@ -6,9 +6,16 @@ import { useGetRecipesQuery } from '../store/api/api';
 import User from '../user/User';
 import CreateRecipe from './create-recipe/CreateRecipe';
 
+// const userId = null;
+
+
 
 function App() {
-  const {isLoading, data} = useGetRecipesQuery();
+  const {isLoading, data} = useGetRecipesQuery(); 
+  // useGetRecipesQuery(undefined, {
+  //   skip: !userId,
+  // });
+  
 
   return (
     <section>

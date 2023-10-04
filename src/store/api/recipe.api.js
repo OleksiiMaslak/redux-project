@@ -8,8 +8,10 @@ export const recipeApi = api.injectEndpoints({
                 body: recipe,
                 url: '/',
                 method: 'POST'                
-
             }),
+            invalidatesTags: () => [{
+                type: "Recipe"
+            }]
         }),
     }),
 })
